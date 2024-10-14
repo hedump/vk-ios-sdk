@@ -156,8 +156,11 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
     instance.permissions = [permissionsSet copy];
     permissions = [permissionsSet allObjects];
 
-    BOOL vkApp = [self vkAppMayExists]
-            && instance.authState == VKAuthorizationInitialized;
+    BOOL providersEnabled = !(options & VKAuthorizationOptionsDisableProviders);
+
+    BOOL vkApp = false;
+//    [self vkAppMayExists]
+//                && instance.authState == VKAuthorizationInitialized && providersEnabled;
 
     BOOL safariEnabled = !(options & VKAuthorizationOptionsDisableSafariController);
 

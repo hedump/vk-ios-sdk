@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "vk-ios-sdk",
+    platforms: [
+        .iOS(.v12)
+    ],
     products: [
         .library(
             name: "vk-ios-sdk",
