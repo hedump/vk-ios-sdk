@@ -317,7 +317,7 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
         return NO;
     }
     NSDictionary *parametersDict = [VKUtil explodeQueryString:parametersString];
-    BOOL inAppCheck = [[passedUrl host] isEqual:@"oauth.vk.com"];
+    BOOL inAppCheck = [[passedUrl host] isEqual:@"oauth.vk.ru"];
 
     void (^throwError)(void) = ^{
         VKError *error = [VKError errorWithQuery:parametersDict];
