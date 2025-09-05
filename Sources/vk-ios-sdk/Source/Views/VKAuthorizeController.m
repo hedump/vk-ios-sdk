@@ -124,7 +124,7 @@ NSString *VK_AUTHORIZE_URL_STRING = @"vkauthorize://authorize";
         params[@"display"] = ctx.displayType;
     }
     
-    return [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", ctx.authPrefix ?: @"https://oauth.vk.com/authorize", [VKUtil queryStringFromParams:params]]];
+    return [NSURL URLWithString:[NSString stringWithFormat:@"%@?%@", ctx.authPrefix ?: @"https://oauth.vk.ru/authorize", [VKUtil queryStringFromParams:params]]];
 }
 
 #pragma mark View prepare
